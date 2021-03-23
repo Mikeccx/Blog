@@ -28,19 +28,15 @@ module.exports = {
         }        
       ],
       sidebar: {
-        '/v3/': [
+        '/nav/': [
             {
-              title: '先导篇',
+              title: '设计模式',
               collapsable: false,
               children: [
-                ['guide/', 'Introduction']
-              ]
-            },
-            {
-              title: 'Vue.js 3.0 核心源码解析​',
-              collapsable: false,
-              children: [
-                ['new/', 'Introduction']
+                ['designpatterns/', '介绍'],
+                'designpatterns/create',
+                'designpatterns/structure',
+                'designpatterns/behavior',
               ]
             }
           ]
