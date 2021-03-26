@@ -4,13 +4,13 @@
         this.name = name
     }
     var a = new fo('Mike')
-    function New(fn, args) {
+    function _new(fn) {
+        // 新建一个新对象
         const newObj = {}
+        // 绑定原型
         newObj.__proto__ = fn.prototype
-        for (const key in args) {
-            newObj[key] = args[key]
-        }
-        return newObj
+        fn.apply(newObj, [].slice.call(arguments, 1))
+        return resObj
     }
-    var b = New(fo, {name: 'Jack'})
+    var b = New(fo, 'jack', 'rose')
 ```
