@@ -52,17 +52,19 @@
     通过事件调度中心，解耦对象于对象的依赖关系
 * 用法
     ```
-    // 发布订阅
+       // 事件调度中心
         class Event {
             constructor() {
                 this.list = {}
             }
+            // 监听
             on(type, fn) {
                 if(!this?.list[type]?.length) {
                     this.list[type] = []
                 }
                 this.list[type].push(fn)
             }
+            // 发布
             emit(type, args) {
                 if (!this?.list[type]?.length) {
                     return
