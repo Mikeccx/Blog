@@ -38,8 +38,21 @@ module.exports = {
                 'designpatterns/structure',
                 'designpatterns/behavior',
               ]
+            },
+            {
+              title: '经典面试题',
+              collapsable: false,
+              children: [
+                'interviewQuestion/new'
+              ]
             }
-          ]
+        ]
+        // '/proto/': [
+        //     {
+        //         title: '原型',
+        //         collapsable: false
+        //     }
+        // ]
     }
   }
 }
