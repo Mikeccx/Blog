@@ -40,10 +40,17 @@ module.exports = {
               ]
             },
             {
-              title: '经典面试题',
+                title: '算法',
+                collapsable: false,
+                children: [
+                  'algorithm/tree',
+                ]
+            },
+            {
+              title: '面试题',
               collapsable: false,
               children: [
-                'interviewQuestion/new'
+                'interviewQuestion/new',
               ]
             }
         ]
