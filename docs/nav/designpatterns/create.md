@@ -37,6 +37,29 @@
 
     var ball = new ballFactory('soccerBall')
 ```
+## 建设者模式
+* 作用
+    
+    构建一个复杂对象，通过多层级变现。
+* 场景
+    暂时没想到～
+* 实现
+```
+    // 职业类
+    class skill {
+        constructor(skill) {
+            this.skill = skill
+        }
+    }
+    // 人类
+    class Human {
+        constructor(name) {
+            this.name = name
+            this.skill = new skill('font-developer)
+        }
+    }
+    const MrC = new Human('cx')
+```
 ## 单例模式
 * 作用
     
