@@ -41,4 +41,23 @@
             )
         }
 ```
+## 外观模式
+* 作用
+    
+    为复杂的子系统提供提议的接口,子系统可能毫无联系。
+* 场景
+
+    1. 撰写浏览器兼容判断.
+    2. 代码库接口.
+* 实现
+```
+    const appearance = {
+        getEle = (id) => {
+            return document.getElementById(id)
+        },
+        setCss = (id, key, value) => {
+            document.getElementById(id).style[key] = value
+        }
+    }
+```
 ## 代理模式
