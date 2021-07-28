@@ -1,5 +1,42 @@
 # 创建型
+## 工厂模式
+* 作用
+    通过工厂对象，创建某一类对象实例。封装某一大类，通过参数，实例化其子类。
+* 场景
+    1. 方法库等实例化。
+* 实现
+```
+    // 足球类
+    class soccerBall{
+        constructor(name) {
+            this.ballName = name
+        }
+        play() {
+            console.log(`play ${this.ballName}`)
+        }
+    }
+    // 蓝球类
+    class basketBall{
+        constructor(name) {
+            this.ballName = name
+        }
+        play() {
+            console.log(`play ${this.ballName}`)
+        }
+    }
+    // 球类工厂
+    class ballFactory{
+        constructor(type) {
+            switch(type) {
+                case 'soccerBall' : return new soccerBall('足球');break;
+                case 'basketBall' : return new basketBall('篮球');break;
+                default: break;
+            }
+        }
+    }
 
+    var ball = new ballFactory('soccerBall')
+```
 ## 单例模式
 * 作用
     
