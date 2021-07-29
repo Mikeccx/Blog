@@ -60,4 +60,46 @@
         }
     }
 ```
+## 适配器模式
+* 作用
+    让相互不兼容的对象或者类能够共同协作
+* 场景
+    1. 数据格式的转换及映射。
+    2. 引入第三方库。
+* 实现
+```
+    // 数据映射
+    function adapter(originData) {
+        return {
+            name: originData[0],
+            age: originData[1],
+            job: originData[2]
+        }
+    }
+```
 ## 代理模式
+* 作用
+    对象间无法直接通信，通过代理对象通信
+* 场景
+    1. vue3响应式原理-proxy
+    2. 浏览器跨域代理
+* 实现
+```
+    var boy = {
+        sendflower(gift) {
+            console.log('男孩送出花')
+            friend.receive(gift)
+        }
+    }
+    var friend = {
+        receive(gift) {
+            console.log(`朋友收到${gift}`)
+            girl.receive(gift)
+        }
+    }
+    var girl = {
+        receive(gift) {
+            console.log(`女孩收到${gift}`)
+        }
+    }
+```
