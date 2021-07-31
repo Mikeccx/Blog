@@ -52,7 +52,14 @@ module.exports = {
               children: [
                 'interviewQuestion/new',
               ]
-            }
+            },
+            {
+                title: '前端兼容问题收集',
+                collapsable: false,
+                children: [
+                  'compatibility/mobile',
+                ]
+              }
         ]
         // '/proto/': [
         //     {
